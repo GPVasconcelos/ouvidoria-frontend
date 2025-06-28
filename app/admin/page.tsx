@@ -174,7 +174,7 @@ export default function AdminPanel() {
           },
           body: JSON.stringify({
             status: selectedMessage.status,
-            adminResponse: selectedMessage.response,
+            adminResponse: selectedMessage.adminResponse,
           }),
         },
       )
@@ -522,7 +522,7 @@ export default function AdminPanel() {
                                   <Textarea
                                     value={selectedMessage.adminResponse || ""}
                                     onChange={(e) =>
-                                      setSelectedMessage({ ...selectedMessage, response: e.target.value })
+                                      setSelectedMessage({ ...selectedMessage, adminResponse: e.target.value })
                                     }
                                     placeholder="Digite uma resposta ou observação interna..."
                                     className="min-h-[120px] border-2 border-gray-200 focus:border-blue-500 rounded-xl resize-none"
